@@ -103,7 +103,7 @@ body {
       margin-bottom: 4px;
     }
 
-    .ant-form-item .ant-row .ant-form-item-label>label {
+    .ant-form-item .ant-row .ant-form-item-label > label {
       font-family: Roboto, sans-serif;
       font-size: 16px;
       line-height: 24px;
@@ -142,15 +142,23 @@ body {
       box-shadow: none;
     }
 
-    .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-input-status-error.ant-input,
-    .ant-col.ant-form-item-control .ant-select-status-error .ant-select-selector {
+    .ant-col.ant-form-item-control
+      .ant-form-item-control-input-content
+      .ant-input-status-error.ant-input,
+    .ant-col.ant-form-item-control
+      .ant-select-status-error
+      .ant-select-selector {
       border-color: #000 !important;
       border-width: 2px !important;
     }
 
-    .ant-col.ant-form-item-control .ant-form-item-control-input-content>input,
-    .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-select-selector,
-    .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-select-selection-search-input {
+    .ant-col.ant-form-item-control .ant-form-item-control-input-content > input,
+    .ant-col.ant-form-item-control
+      .ant-form-item-control-input-content
+      .ant-select-selector,
+    .ant-col.ant-form-item-control
+      .ant-form-item-control-input-content
+      .ant-select-selection-search-input {
       border-radius: 12px;
       border-color: #c3c3ed;
       border-width: 1px;
@@ -254,7 +262,8 @@ body {
   }
 }
 
-.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+.ant-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   background-color: rgba(131, 102, 255, 0.2);
 }
 
@@ -348,29 +357,29 @@ body {
 
       .ant-form-item .ant-row .ant-form-item-label {
         padding: 0;
-        margin-bottom: 4px;
+        margin-bottom: 4/4vw;
       }
 
-      .ant-form-item .ant-row .ant-form-item-label>label {
+      .ant-form-item .ant-row .ant-form-item-label > label {
         font-family: Roboto, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 16/4vw;
+        line-height: 24/4vw;
         font-weight: 400;
         color: #fff;
       }
 
       .ant-btn.ant-btn-block {
-        border-radius: 6px;
-        width: 240px;
-        height: 46px;
-        border-radius: 23px;
-        border: 2px solid @primaryColor;
+        border-radius: 6/4vw;
+        width: 240/4vw;
+        height: 46/4vw;
+        border-radius: 23/4vw;
+        border: 2/4vw solid @primaryColor;
         color: @primaryColor;
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 20/4vw;
         font-weight: 500;
-        line-height: 22px;
-        margin-top: 42px;
+        line-height: 22/4vw;
+        margin-top: 42/4vw;
         left: 50%;
         transform: translateX(-50%);
 
@@ -382,7 +391,7 @@ body {
       }
 
       .ant-col.ant-form-item-label {
-        margin-top: -6px;
+        margin-top: -6/4vw;
       }
 
       .ant-col.ant-form-item-control .ant-select-focused .ant-select-selector {
@@ -390,16 +399,26 @@ body {
         box-shadow: none;
       }
 
-      .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-input-status-error.ant-input,
-      .ant-col.ant-form-item-control .ant-select-status-error .ant-select-selector {
+      .ant-col.ant-form-item-control
+        .ant-form-item-control-input-content
+        .ant-input-status-error.ant-input,
+      .ant-col.ant-form-item-control
+        .ant-select-status-error
+        .ant-select-selector {
         padding: 0;
         border-color: #000 !important;
         border-width: 2/4vw !important;
       }
 
-      .ant-col.ant-form-item-control .ant-form-item-control-input-content>input,
-      .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-select-selector,
-      .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-select-selection-search-input {
+      .ant-col.ant-form-item-control
+        .ant-form-item-control-input-content
+        > input,
+      .ant-col.ant-form-item-control
+        .ant-form-item-control-input-content
+        .ant-select-selector,
+      .ant-col.ant-form-item-control
+        .ant-form-item-control-input-content
+        .ant-select-selection-search-input {
         border-radius: 6/4vw;
         border-color: #c3c3ed;
         border-width: 1/4vw;
@@ -431,6 +450,20 @@ body {
         }
       }
 
+      .ant-col.ant-form-item-control .ant-form-item-control-input-content {
+        .ant-select-selector .ant-select-selection-search-input {
+          &:focus {
+            background-color: #00000000;
+          }
+          &:active {
+            background-color: #00000000;
+          }
+          &:hover {
+            background-color: #00000000;
+          }
+        }
+      }
+
       .mobile-submit-btn {
         margin-top: 48/4vw;
       }
@@ -441,7 +474,7 @@ body {
       height: 100vh;
       width: 100vw;
       overflow: hidden;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(4/4vw);
       background-color: rgba(18, 22, 25, 0.75);
 
       .mobile-fail-dialog {
@@ -493,7 +526,7 @@ body {
       width: 240/4vw;
       height: 38/4vw;
       border-radius: 40/4vw;
-      border: 1px solid @primaryColor;
+      border: 1/4vw solid @primaryColor;
       background-color: #fff;
       color: @primaryColor;
       font-family: Roboto;
@@ -508,7 +541,21 @@ body {
     }
   }
 
-  .ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-    background-color: #c3c3ed;
+  .ant-select-dropdown {
+    border-radius: 12/4vw;
+    .rc-virtual-list {
+      border-radius: 12/4vw;
+    }
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      background-color: #c3c3ed;
+    }
+    .ant-select-item {
+      display: block;
+      min-height: 32/4vw;
+      padding: 5/4vw 12/4vw;
+      color: rgba(0, 0, 0, 0.85);
+      font-size: 14/4vw;
+      line-height: 22/4vw;
+    }
   }
 }
