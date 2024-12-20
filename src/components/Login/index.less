@@ -1,0 +1,243 @@
+.pc-login-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(4px);
+  background-color: rgba(18, 22, 25, 0.75);
+  z-index: 10;
+
+  .pc-login-dialog {
+    width: 460px;
+    height: 654px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background-color: #fdfcff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    align-items: center;
+
+    &.pc-login-dialog-login {
+      height: 552px;
+    }
+
+    .pc-login-dialog-close {
+      height: 36px;
+      width: 36px;
+      position: absolute;
+      top: 6px;
+      right: 12px;
+      cursor: pointer;
+    }
+
+    .pc-login-dialog-form-area {
+      .pc-login-dialog-form {
+        margin-top: 20px;
+
+        .ant-form-item {
+          margin-bottom: 12px;
+        }
+
+        .ant-form-item-explain {
+          height: 12px !important;
+          .ant-form-item-explain-error {
+            height: 12px !important;
+            color: #000;
+            justify-content: end;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 300;
+            display: flex;
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            // height: 11px;
+            // align-items: flex-end;
+            // margin-top: 5px;
+            transform: none;
+            overflow: visible;
+
+            &::after {
+              width: 20px;
+              height: 20px;
+              content: ' ';
+              display: inline-block;
+              margin-left: 5px;
+              background: url(/warning.png) no-repeat center center/20px 20px;
+            }
+          }
+        }
+
+        .ant-input-password {
+          width: 370px;
+          height: 56px;
+          border-radius: 12px;
+          border: 1px solid #c3c3ed;
+
+          .ant-input {
+            border: none;
+            height: 40px;
+          }
+          .ant-input-suffix > span > svg {
+            color: #a899ff;
+            height: 24px;
+            width: 24px;
+          }
+        }
+
+        &.ant-form-vertical .ant-form-item-label > label {
+          font-family: Roboto;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 18.75px;
+          color: #525263;
+        }
+
+        .ant-input {
+          width: 370px;
+          height: 56px;
+          border-radius: 12px;
+          border: 1px solid #c3c3ed;
+          font-size: 16px;
+        }
+        .pc-remember-checkbox {
+          margin-top: -12px;
+          .pc-remember-checkbox-warp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            > a {
+              color: #8366ff;
+              font-family: Roboto;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 14px;
+              text-decoration-line: underline;
+            }
+
+            #remember {
+              appearance: none;
+
+              height: 16px;
+              width: 16px;
+              margin-right: 5px;
+              margin-left: 1px;
+              background: no-repeat url(/empty.png) center / 16px 16px;
+
+              &:focus {
+                border: none;
+                outline: none;
+              }
+
+              &:checked {
+                height: 16px;
+                width: 16px;
+                margin-right: 5px;
+                background: no-repeat url(/checked.png) center / 16px 16px;
+              }
+            }
+          }
+        }
+
+        .pc-submit-btn {
+          margin-bottom: 0;
+
+          .pc-submit-btn-btn {
+            width: 240px;
+            color: #8366ff;
+            border-radius: 20px;
+            border: 1px solid #8366ff;
+            margin-left: 65px;
+            margin-top: 20px;
+            &:hover {
+              background-color: rgba(140, 104, 255, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .login-dialog-title {
+      color: #3b3a47;
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+
+    .login-dialog-subtitle {
+      margin-top: 12px;
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.75px;
+      color: #525263;
+
+      .login-dialog-subtitle-change {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #8366ff;
+        cursor: pointer;
+      }
+    }
+
+    .divider {
+      width: 364px;
+      height: 67px;
+    }
+
+    .other-login {
+      width: 360px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 46px;
+
+      .other-login-item {
+        flex-grow: 0;
+        width: 156px;
+        height: 32px;
+        border-radius: 40px;
+        border: 1px solid #8366ff;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #686782;
+        letter-spacing: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(140, 104, 255, 0.1);
+        }
+
+        > img {
+          width: 20px;
+          height: 20px;
+          margin-right: 6px;
+        }
+
+        &:first-child {
+          width: 168px;
+          margin-right: 25px;
+          text-wrap: nowrap;
+
+          > img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
