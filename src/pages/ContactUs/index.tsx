@@ -54,20 +54,20 @@ export default function ContactUs({}: IProps) {
   }, []);
 
   return (
-    <div className="pc-contact-us-warp">
+    <div className="pc-contact-us-warp mobile-contact-us-warp">
       <div style={{ position: 'absolute', top: 0, width: '100%' }}>
         <NavBar current="ContactUs" />
       </div>
 
       {/* 默认与失败，保持表达在底层 */}
       {submitStatus !== 'success' ? (
-        <div className="pc-contact-us-form-warp">
-          <span className="pc-contact-us-title">
+        <div className="pc-contact-us-form-warp mobile-contact-us-form-warp">
+          <span className="pc-contact-us-title mobile-contact-us-title">
             Lets Have a Chat
-            <img className="pc-hand" src="/hand3.png" alt="hand" />
+            <img className="pc-hand mobile-hand" src="/hand.png" alt="hand" />
           </span>
           <Form
-            className="pc-ContactUsForm"
+            className="pc-ContactUsForm mobile-ContactUsForm"
             layout="vertical"
             form={form}
             requiredMark={false}
@@ -142,31 +142,31 @@ export default function ContactUs({}: IProps) {
           </Form>
         </div>
       ) : (
-        <div className="pc-contact-us-success">
-          <span className="pc-contact-us-title">
+        <div className="pc-contact-us-success mobile-contact-us-success">
+          <span className="pc-contact-us-title mobile-contact-us-title">
             Thank You!
-            <img className="pc-hand" src="/hand2.png" alt="hand" />
+            <img className="pc-hand mobile-hand" src="/hand2.png" alt="hand" />
           </span>
-          <span className="pc-contact-us-subtitle">
+          <span className="pc-contact-us-subtitle mobile-contact-us-subtitle">
             We’ve received your submission, and we’ll be in touch soon!
           </span>
         </div>
       )}
 
       {submitStatus === 'fail' ? (
-        <div className="pc-fail-mask">
-          <div className="pc-fail-dialog">
+        <div className="pc-fail-mask mobile-fail-mask">
+          <div className="pc-fail-dialog mobile-fail-dialog">
             <img
               onClick={closeDialog}
-              className="pc-fail-dialog-close"
+              className="pc-fail-dialog-close mobile-fail-dialog-close"
               src="/close.png"
               alt="close"
             />
-            <span className="pc-fail-title">Submission Failed</span>
-            <span className="pc-fail-subtitle">
+            <span className="pc-fail-title mobile-fail-title">Submission Failed</span>
+            <span className="pc-fail-subtitle mobile-fail-subtitle">
               There was an issue submitting your form. Please try again.
             </span>
-            <div onClick={closeDialog} className="pc-base-btn">
+            <div onClick={closeDialog} className="pc-base-btn mobile-base-btn">
               OK
             </div>
           </div>

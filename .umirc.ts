@@ -45,7 +45,7 @@ export default defineConfig({
       viewportHeight: 1080,
       unitPrecision: 5,
       viewportUnit: 'vw',
-      selectorBlackList: ['pc'],
+      selectorBlackList: ['pc', 'ant'],
       minPixelValue: 1,
       mediaQuery: true,
     }),
