@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "build": "umi build",
-    "build:prod": "cross-env NODE_OPTIONS=--openssl-legacy-provider REACT_APP_ENV=uat MOCK=none UMI_ENV=uat umi build",
-    "build:test": "cross-env NODE_OPTIONS=--openssl-legacy-provider REACT_APP_ENV=test MOCK=none UMI_ENV=test umi build",
+    "build:prod": "cross-env REACT_APP_ENV=uat MOCK=none UMI_ENV=uat umi build",
+    "build:test": "cross-env REACT_APP_ENV=test MOCK=none UMI_ENV=test umi build",
     "postinstall": "umi generate tmp",
     "prepare": "husky install && chmod ug+x .husky/*",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
