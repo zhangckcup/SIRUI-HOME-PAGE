@@ -322,11 +322,15 @@ body {
       width: 286/4vw;
       --antd-wave-shadow-color: @primaryColor;
 
+      .ant-form-item {
+        margin-top: 20/4vw;
+      }
+
       .ant-form-item-explain-error {
-        color: #000;
-        justify-content: end;
+        color: #ffc442;
+        justify-content: flex-start;
         font-family: Roboto;
-        font-size: 10/4vw;
+        font-size: 8/4vw;
         line-height: 10/4vw;
         font-weight: 300;
         display: flex;
@@ -337,52 +341,53 @@ body {
         // margin-top: 5px;
 
         &::after {
-          width: 12/4vw;
-          height: 12/4vw;
+          width: 8/4vw;
+          height: 8/4vw;
           content: ' ';
           display: inline-block;
           margin-left: 5/4vw;
-          background: url(/warning.png) no-repeat center center/12/4vw 12/4vw;
+          background: url(/warning_mobile.png) no-repeat center center/8/4vw 8/4vw;
         }
       }
 
       .ant-form-item .ant-row .ant-form-item-label {
         padding: 0;
-        margin-bottom: 4px;
+        margin-bottom: 5/4vw;
       }
 
       .ant-form-item .ant-row .ant-form-item-label>label {
         font-family: Roboto, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14/4vw;
+        line-height: 24/4vw;
         font-weight: 400;
         color: #fff;
       }
 
       .ant-btn.ant-btn-block {
-        border-radius: 6px;
-        width: 240px;
-        height: 46px;
-        border-radius: 23px;
-        border: 2px solid @primaryColor;
-        color: @primaryColor;
+        border-radius: 6/4vw;
+        width: 286/4vw;
+        height: 34/4vw;
+        border-radius: 40/4vw;
+        border: 2/4vw solid #fff;
+        background-color: transparent;
+        color: #fff;
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 14/4vw;
         font-weight: 500;
-        line-height: 22px;
-        margin-top: 42px;
+        line-height: 22/4vw;
+        margin-top: 42/4vw;
         left: 50%;
         transform: translateX(-50%);
 
         &:hover {
-          // border-color: rgba(140, 104, 255, 0.8);
-          background-color: rgba(140, 104, 255, 0.1);
+          border-color: #fff;
+          background-color: rgba(140, 104, 255, 0);
           box-shadow: none;
         }
       }
 
       .ant-col.ant-form-item-label {
-        margin-top: -6px;
+        margin-top: -6/4vw;
       }
 
       .ant-col.ant-form-item-control .ant-select-focused .ant-select-selector {
@@ -393,8 +398,8 @@ body {
       .ant-col.ant-form-item-control .ant-form-item-control-input-content .ant-input-status-error.ant-input,
       .ant-col.ant-form-item-control .ant-select-status-error .ant-select-selector {
         padding: 0;
-        border-color: #000 !important;
-        border-width: 2/4vw !important;
+        border-color: #ffc442 !important;
+        border-width: 1/4vw !important;
       }
 
       .ant-col.ant-form-item-control .ant-form-item-control-input-content>input,
@@ -489,7 +494,7 @@ body {
       }
     }
 
-    .pc-base-btn {
+    .mobile-base-btn {
       width: 240/4vw;
       height: 38/4vw;
       border-radius: 40/4vw;

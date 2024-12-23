@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NavBar from '@/components/Navbar';
 import { featuresData, featuresBottomData } from './features';
 import Title from '@/components/Title';
@@ -25,14 +25,12 @@ export default function Features() {
           <div
             ref={(ref) => (floorRef.current[index] = ref)}
             key={index}
-            className={`pc-floor-wrap pc-features-floor dark-bg ${
-              index % 2 === 0 ? 'common-dark-bg' : 'common-light-bg'
-            }`}
+            className={`pc-floor-wrap pc-features-floor dark-bg ${index % 2 === 0 ? 'common-dark-bg' : 'common-light-bg'
+              }`}
           >
             <div
-              className={`common-floor-wrap pc-features-floor ${
-                index % 2 === 0 ? 'common-dark-bg' : 'common-light-bg'
-              }`}
+              className={`common-floor-wrap pc-features-floor ${index % 2 === 0 ? 'common-dark-bg' : 'common-light-bg'
+                }`}
             >
               <Title {...item} />
               {item.useComponents ? (
