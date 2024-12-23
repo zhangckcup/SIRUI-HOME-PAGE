@@ -4,8 +4,8 @@ import routes from './config/routes';
 import px2viewport from 'postcss-px-to-viewport';
 
 export default defineConfig({
-  base: '/',
-  publicPath: '/',
+  base: '/sirui/',
+  publicPath: '/sirui/',
   alias: {
     '@': path.resolve(__dirname, 'src'),
     $public: path.resolve(__dirname, 'public'),
