@@ -113,6 +113,9 @@ export default function NavBar({ current }) {
                     <img className="mobile-close" src="/mask_close.png" />
                   </div>
                   <div className="mobile-item-wrap">
+                    <a className={`mobile-item-btn`} href="https://test.sandwichlab.ai/lexi" target='_blank' onClick={() => { setShowMask(false) }}>
+                      Login
+                    </a>
                     <a className={`mobile-item-btn ${current === 'Home' ? 'mobile-active-item' : ''}`} href="/" onClick={() => { setShowMask(false) }}>
                       Home
                     </a>
