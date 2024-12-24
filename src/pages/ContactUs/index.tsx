@@ -64,7 +64,11 @@ export default function ContactUs({}: IProps) {
         <div className="pc-contact-us-form-warp mobile-contact-us-form-warp">
           <span className="pc-contact-us-title mobile-contact-us-title">
             Lets Have a Chat
-            <img className="pc-hand mobile-hand" src="/hand.png" alt="hand" />
+            <img
+              className="pc-hand mobile-hand"
+              src={require('$public/hand.png')}
+              alt="hand"
+            />
           </span>
           <Form
             className="pc-ContactUsForm mobile-ContactUsForm"
@@ -145,7 +149,11 @@ export default function ContactUs({}: IProps) {
         <div className="pc-contact-us-success mobile-contact-us-success">
           <span className="pc-contact-us-title mobile-contact-us-title">
             Thank You!
-            <img className="pc-hand mobile-hand" src="/hand2.png" alt="hand" />
+            <img
+              className="pc-hand mobile-hand"
+              src={require('$public/hand2.png')}
+              alt="hand"
+            />
           </span>
           <span className="pc-contact-us-subtitle mobile-contact-us-subtitle">
             We’ve received your submission, and we’ll be in touch soon!
@@ -159,10 +167,12 @@ export default function ContactUs({}: IProps) {
             <img
               onClick={closeDialog}
               className="pc-fail-dialog-close mobile-fail-dialog-close"
-              src="/close.png"
+              src={require('$public/close.png')}
               alt="close"
             />
-            <span className="pc-fail-title mobile-fail-title">Submission Failed</span>
+            <span className="pc-fail-title mobile-fail-title">
+              Submission Failed
+            </span>
             <span className="pc-fail-subtitle mobile-fail-subtitle">
               There was an issue submitting your form. Please try again.
             </span>

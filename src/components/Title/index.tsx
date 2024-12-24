@@ -13,7 +13,9 @@ export default (props: ITitleProps) => {
       {titleList.map((item, index) => {
         return (
           <div
-            className={`${item.class} ${item.needIcon ? 'pc-has-icon-title' : ''}`}
+            className={`${item.class} ${
+              item.needIcon ? 'pc-has-icon-title' : ''
+            }`}
             key={index}
           >
             {item.text}
@@ -23,31 +25,38 @@ export default (props: ITitleProps) => {
                 <div className="pc-title-icon-view">
                   <img
                     className="pc-title-icon-facebook pc-link-facebook"
-                    src="/titleFacebook.png"
+                    src={require('$public/titleFacebook.png')}
                     alt="facebook"
                   />
-                  <img className="pc-title-icon-ig" src="/titleIg.png" alt="ig" />
+                  <img
+                    className="pc-title-icon-ig"
+                    src={require('$public/titleIg.png')}
+                    alt="ig"
+                  />
                 </div>
               </div>
             ) : null}
           </div>
         );
       })}
-      {
-        !getWidth() && needMobileIcon ?  (
-          <div className="mobile-title-icon-wrap">
-            <div className="mobile-title-icon-view">
-              <img
-                className="mobile-title-icon-facebook mobile-link-facebook"
-                src="/titleFacebook.png"
-                alt="facebook"
-              />
-              <div className="mobile-title-icon-border" />
-              <img className="mobile-title-icon-ig" src="/titleIg.png" alt="ig" />
-            </div>
+      {!getWidth() && needMobileIcon ? (
+        <div className="mobile-title-icon-wrap">
+          <div className="mobile-title-icon-view">
+            <img
+              className="mobile-title-icon-facebook mobile-link-facebook"
+              src={require('$public/titleFacebook.png')}
+              alt="facebook"
+            />
+            <div className="mobile-title-icon-border" />
+            <img
+              className="mobile-title-icon-ig"
+              src={require('$public/titleIg.png')}
+              alt="ig"
+            />
           </div>
-        ) : null
-      };
+        </div>
+      ) : null}
+      ;
     </>
   );
 };

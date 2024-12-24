@@ -85,7 +85,8 @@ export const featuresData = [
     btnStyle: {
       buttonType: 'more', // 按钮类型: "more"、"tryFree"
       isDeepStyle: true, // 按钮是否是深色调
-      className: 'common-floor-font pc-more pc-second-btn mobile-more mobile-second-btn', // 按钮类名
+      className:
+        'common-floor-font pc-more pc-second-btn mobile-more mobile-second-btn', // 按钮类名
       btnHref: '/more/2/light', // 跳转至more页面必要参数/index/pageStyle, index => 从这里取第index个数据。 pageStyle => light: 页面背景白色, deep: 页面背景深色
       arrowStyle: 'tryFree', // 按钮箭头类型: home、tryFree
     },
@@ -138,7 +139,8 @@ export const featuresData = [
     btnStyle: {
       buttonType: 'more',
       isDeepStyle: false,
-      className: 'common-floor-font pc-more pc-third-btn mobile-more mobile-third-btn',
+      className:
+        'common-floor-font pc-more pc-third-btn mobile-more mobile-third-btn',
       btnHref: '/more/3/deep',
       arrowStyle: 'tryFree', // 按钮箭头类型: home、tryFree
     },
@@ -191,7 +193,8 @@ export const featuresData = [
     btnStyle: {
       buttonType: 'more', // 按钮类型: "more"、"tryFree"
       isDeepStyle: true, // 按钮是否是深色调
-      className: 'common-floor-font pc-more pc-second-btn mobile-more mobilec-second-btn', // 按钮类名
+      className:
+        'common-floor-font pc-more pc-second-btn mobile-more mobilec-second-btn', // 按钮类名
       btnHref: '/more/4/light', // 跳转至more页面必要参数/index/pageStyle, index => 从这里取第index个数据。 pageStyle => light: 页面背景白色, deep: 页面背景深色
       arrowStyle: 'tryFree', // 按钮箭头类型: home、tryFree
     },
@@ -295,7 +298,8 @@ export const featuresData = [
       // 按钮数据:
       buttonType: 'tryFree', //支持两种类型 tryFree: 图片按钮tryFree, more: 文字按钮。 需要更改: 前往components/Button/index
       isDeepStyle: true, // 控制按钮颜色是深色类型还是浅色类型
-      className: 'pc-floor-forth-btn pc-tryFreeLightBtn mobile-floor-fifth-btn mobile-tryFreeLightBtn', // 按钮类名，可自定义，需要更改: 前往components/Button/index.less
+      className:
+        'pc-floor-forth-btn pc-tryFreeLightBtn mobile-floor-fifth-btn mobile-tryFreeLightBtn', // 按钮类名，可自定义，需要更改: 前往components/Button/index.less
       btnHref: 'https://test.sandwichlab.ai/lexi', // 按钮动作，可自定义配置
       arrowStyle: 'tryFree', // 按钮箭头类型: home、tryFree
     },
@@ -306,20 +310,20 @@ export const featuresData = [
 export const featuresBottomData = {
   left: {
     titleIcon: {
-      src: '/logo_deep.png',
+      src: require('$public/logo_deep.png'),
       class: 'pc-sanwich-icon mobile-sanwich-icon',
       href: '/',
     },
     items: [
       {
-        srcPc: '/Facebook.png',
-        srcMobile: '/titleFacebook.png',
+        srcPc: require('$public/Facebook.png'),
+        srcMobile: require('$public/titleFacebook.png'),
         class: 'pc-facebook-icon mobile-facebook-icon',
         href: 'https://www.facebook.com/profile.php?id=61562781021800',
       },
       {
-        srcPc: '/Instagram.png',
-        srcMobile: '/titleIg.png',
+        srcPc: require('$public/Instagram.png'),
+        srcMobile: require('$public/titleIg.png'),
         class: 'pc-instagram-icon mobile-instagram-icon',
         href: 'https://www.instagram.com/sandwich_lab_ai/',
       },

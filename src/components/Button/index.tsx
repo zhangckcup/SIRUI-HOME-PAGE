@@ -1,5 +1,6 @@
 import React from 'react';
 import TryFreeBtn from '../TryFreeBtn';
+import { NavLink } from 'umi';
 import './inde.less';
 
 export default (props) => {
@@ -10,9 +11,9 @@ export default (props) => {
   return (
     <>
       {buttonType === 'more' ? (
-        <a href={btnHref} className={className}>
+        <NavLink to={btnHref} className={className}>
           {'more'}
-        </a>
+        </NavLink>
       ) : (
         <TryFreeBtn {...{ isDeepStyle, className, btnHref, arrowStyle }} />
       )}

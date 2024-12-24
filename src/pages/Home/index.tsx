@@ -5,18 +5,29 @@ import './index.less';
 
 export default function Home() {
   // banner图列
-  const PcHomeImg = ['/t1.jpg', '/t2.jpg', '/t3.jpg', '/t4.jpg', '/t5.jpg'];
-  const MobileImg = ['/mobile1.jpg', '/mobile2.jpg', '/mobile3.jpg', '/mobile4.jpg', '/mobile5.jpg'];
+  const PcHomeImg = [
+    require('$public/t1.jpg'),
+    require('$public/t2.jpg'),
+    require('$public/t3.jpg'),
+    require('$public/t4.jpg'),
+    require('$public/t5.jpg'),
+  ];
+  const MobileImg = [
+    require('$public/mobile1.jpg'),
+    require('$public/mobile2.jpg'),
+    require('$public/mobile3.jpg'),
+    require('$public/mobile4.jpg'),
+    require('$public/mobile5.jpg'),
+  ];
   const RandomNum = Math.floor(Math.random() * PcHomeImg.length);
   // 随即透出其一
   const randomImg = useMemo(() => {
     if (getWidth()) {
-      return PcHomeImg[RandomNum]
+      return PcHomeImg[RandomNum];
     } else {
-      return MobileImg[RandomNum]
+      return MobileImg[RandomNum];
     }
-  }, [getWidth()])
-
+  }, [getWidth()]);
 
   useEffect(() => {
     const scrollCb = () => {
@@ -28,14 +39,26 @@ export default function Home() {
       document.removeEventListener('wheel', scrollCb);
     };
   }, []);
-  console.log(RandomNum)
+  console.log(RandomNum);
 
   return (
-    <div className={`${getWidth() ? 'pc-all-wrap' : 'mobile-all-wrap'} "home-wrap"`}>
+    <div
+      className={`${
+        getWidth() ? 'pc-all-wrap' : 'mobile-all-wrap'
+      } "home-wrap"`}
+    >
       <div className="pc-home-floor">
         {/* 背景图 */}
-        <img className="pc-home-banner mobile-home-banner" alt={'Home Banner'} src={randomImg} />
-        <div className={`pc-home-btn mobile-home-btn ${RandomNum > 2 ? 'mobile-center-btn' : ''}`}>
+        <img
+          className="pc-home-banner mobile-home-banner"
+          alt={'Home Banner'}
+          src={randomImg}
+        />
+        <div
+          className={`pc-home-btn mobile-home-btn ${
+            RandomNum > 2 ? 'mobile-center-btn' : ''
+          }`}
+        >
           <TryFreeBtn btnHref="https://test.sandwichlab.ai/lexi" />
         </div>
       </div>

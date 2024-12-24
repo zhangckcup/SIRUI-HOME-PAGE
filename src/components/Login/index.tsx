@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
+import { NavLink } from 'umi';
 import 'antd/dist/antd.css';
 import './index.less';
 
@@ -24,7 +25,7 @@ function Remember({ onChange, value }: any) {
         />
         <label htmlFor="remember">Remember me</label>
       </div>
-      <a href="">Forget your password</a>
+      <NavLink to="">Forget your password</NavLink>
     </div>
   );
 }
@@ -48,11 +49,15 @@ export default function Login({ show, onClose }: IProps) {
   if (show) {
     return (
       <div className="pc-login-mask">
-        <div className={`pc-login-dialog ${isLogin ? 'pc-login-dialog-login' : ''}`}>
+        <div
+          className={`pc-login-dialog ${
+            isLogin ? 'pc-login-dialog-login' : ''
+          }`}
+        >
           <img
             onClick={() => onCloseIn()}
             className="pc-login-dialog-close"
-            src="/close.png"
+            src={require('$public/close.png')}
             alt="close"
           />
           <div className="pc-login-dialog-title">
@@ -152,14 +157,18 @@ export default function Login({ show, onClose }: IProps) {
               </Form.Item>
             </Form>
           </div>
-          <img className="pc-divider" src="/Divider.png" alt="Divider" />
+          <img
+            className="pc-divider"
+            src={require('$public/Divider.png')}
+            alt="Divider"
+          />
           <div className="pc-other-login">
             <div className="pc-other-login-item">
-              <img src="/fblogo.png" alt="Facebook" />
+              <img src={require('$public/fblogo.png')} alt="Facebook" />
               Sign-up with Facebook
             </div>
             <div className="pc-other-login-item">
-              <img src="/googlelogo.png" alt="Google" />
+              <img src={require('$public/googlelogo.png')} alt="Google" />
               Continue with Google
             </div>
           </div>

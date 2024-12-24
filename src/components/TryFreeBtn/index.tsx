@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { NavLink } from 'umi';
 import './index.less';
 
 export default function TryFreeBtn(props) {
@@ -31,9 +32,13 @@ export default function TryFreeBtn(props) {
   }, [arrowStyle]);
 
   return (
-    <a className={`pc-try-btn mobile-try-btn ${className}`} href={btnHref} target="_blank">
+    <NavLink
+      className={`pc-try-btn mobile-try-btn ${className}`}
+      to={btnHref}
+      target="_blank"
+    >
       Try for free now
       {showArrow}
-    </a>
+    </NavLink>
   );
 }
