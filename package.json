@@ -7,7 +7,7 @@
     "postinstall": "umi generate tmp",
     "prepare": "husky install && chmod ug+x .husky/*",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider && cross-env umi dev",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider umi dev",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },

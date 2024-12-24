@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from 'react';
 import TryFreeBtn from '@/components/TryFreeBtn';
 import { getWidth } from '@/hooks/useResponsive';
 import './index.less';
+import { history } from 'umi';
 
 export default function Home() {
   // banner图列
@@ -31,7 +32,7 @@ export default function Home() {
 
   useEffect(() => {
     const scrollCb = () => {
-      window.location.href = '/Features';
+      history.push('/Features');
     };
     document.addEventListener('wheel', scrollCb);
 
